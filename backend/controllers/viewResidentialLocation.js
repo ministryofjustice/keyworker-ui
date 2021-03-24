@@ -68,7 +68,8 @@ module.exports = ({ allocationService, elite2Api, keyworkerApi }) => {
   }
 
   const post = async (req, res) => {
-    const { activeCaseLoadId, allocateKeyworker, residentialLocation } = req.body
+    const { residentialLocation } = req.query
+    const { activeCaseLoadId, allocateKeyworker } = req.body
 
     const selectedKeyworkerAllocations = allocateKeyworker.filter((keyworker) => keyworker)
 
